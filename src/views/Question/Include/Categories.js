@@ -5,32 +5,32 @@ export default class Categories extends Component {
     return (
       <div className="box-shadow mb-4">
         <div className="col-12 bg-topics py-3">
-          <span className="h6 text-topics">Bo'limlar</span>
+          <span className="h6 text-topics">Categories</span>
         </div>
         <div className="col-12 bg-white py-3">
           <ul className="list-unstyled text-secondary">
             <li className="list-item">
               <span className="fa fa-caret-right"></span>&nbsp;&nbsp;
               <a href="#" className="text-secondary">
-                Umumiy bo'lim
+                C++
               </a>
             </li>
             <li className="list-item">
               <span className="fa fa-caret-right"></span>&nbsp;&nbsp;
               <a href="#" className="text-secondary">
-                Jamiyat va inson
+                Python
               </a>
             </li>
             <li className="list-item">
               <span className="fa fa-caret-right"></span>&nbsp;&nbsp;
               <a href="#" className="text-secondary">
-                Umumiy savol va javoblar
+                Laravel
               </a>
             </li>
             <li className="list-item">
               <span className="fa fa-caret-right"></span>&nbsp;&nbsp;
               <a href="#" className="text-secondary">
-                Sug'urta turlari haqida
+                Django
               </a>
             </li>
           </ul>

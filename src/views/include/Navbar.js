@@ -5,7 +5,7 @@ const Navbar = () => {
     <div className="navbar navbar-expand-md navbar-dark bg-primary sticky-top">
       <div className="container">
         <a className="navbar-brand" href="#">
-          Forum - kafolat.uz
+          Forum
         </a>
         <button
           className="navbar-toggler"
@@ -22,7 +22,7 @@ const Navbar = () => {
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
               <a className="nav-link" href="/">
-                Kafolat.uz
+                Developers
               </a>
             </li>
             <li className="nav-item">
