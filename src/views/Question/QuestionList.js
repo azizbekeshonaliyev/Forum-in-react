@@ -5,7 +5,7 @@ import RightMenu from './RightMenu';
 export default class QuestionList extends Component {
     constructor(props) {
         super(props);
-        let item =             {
+        let item = {
             title: '10 Kids Unaware of Their Halloween Costume',
             desc: "It's one thing to subject yourself to a Halloween costume mishap because, hey, that's your prerogative."
         };
@@ -15,7 +15,7 @@ export default class QuestionList extends Component {
         return (
 	        <div className="row pt-4">
                 <div className="col-12 col-sm-12 col-md-9">
-                    <QuestionItem questions={this.questions}></QuestionItem>
+                    <QuestionItem questions={this.state.questions}></QuestionItem>
                 </div>
                 <RightMenu></RightMenu>                    
             </div>
