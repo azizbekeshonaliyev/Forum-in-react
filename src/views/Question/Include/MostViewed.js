@@ -5,7 +5,7 @@ export default class MostViewed extends Component {
     return (
       <div className="box-shadow mb-4">
         <div className="col-12 bg-topics py-3">
-          <span className="h6 text-topics">Ko'p ko'rilganlar</span>
+          <span className="h6 text-topics">Most viewed</span>
         </div>
         <div className="col-12 bg-white py-3">
           <ul className="list-unstyled text-secondary">

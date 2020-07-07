@@ -15,7 +15,7 @@ const QuestionItem = props => {
                   />
                 </div>
                 <p>
-                  <a href="#">Jamshid</a>
+                  <a href="#">Azizbek</a>
                   <small className="text-topics">
                     &nbsp;<span className="badge badge-danger">off</span>
                   </small>
@@ -40,12 +40,12 @@ const QuestionItem = props => {
                 <p className="text-secondary">
                   <span className="ft-th">
                     <span className="fa fa-user"></span>&nbsp;Qo'shdi:{" "}
-                    <a href="#">Eshnazarov Jamshid</a>
+                    <a href="#">Azizbek Eshonaliyev</a>
                     &nbsp;|&nbsp;
                     <span className="fa fa-clock-o"></span>&nbsp;Qo'shilgan:
                     2017-09-07 10:05 &nbsp;|&nbsp;
                     <span className="fa fa-bars"></span>&nbsp;Bo'lim:{" "}
-                    <a href="#">Umumiy bo'lim</a>
+                    <a href="#">Laravel</a>
                   </span>
                 </p>
               </div>
