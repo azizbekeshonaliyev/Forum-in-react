@@ -31,7 +31,7 @@ const QuestionItem = props => {
                 </span>
                 &nbsp;
                 <a href="/forum_in" className="h6 text-topics">
-                  10 Kids Unaware of Their Halloween Costume
+                  10 Kids Unaware of Their Halloween Costume1
                 </a>
                 <p className="text-secondary">
                   It's one thing to subject yourself to a Halloween costume mishap
