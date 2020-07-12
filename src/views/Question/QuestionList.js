@@ -15,7 +15,9 @@ export default class QuestionList extends Component {
         return (
 	        <div className="row pt-4">
                 <div className="col-12 col-sm-12 col-md-9">
-                    <QuestionItem questions={this.state.questions}></QuestionItem>
+                    {this.state.questions.map(item => (
+                        <QuestionItem key={item.title} question={item}></QuestionItem>
+                    ))}
                 </div>
                 <RightMenu></RightMenu>                    
             </div>

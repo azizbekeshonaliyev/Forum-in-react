@@ -1,9 +1,14 @@
-import React from "react";
 
-const QuestionItem = props => {  
-    const rows = props.questions.map((row, index) => {
-      return (
-        <div key={index} className="box-shadow mb-4">
+import React, { Component } from 'react'
+
+export default class QuestionItem extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div className="box-shadow mb-4">
           <div className="col-12 bg-white py-4 topics">
             <div className="row">
               <div className="col-2 no-guttesr text-center">
@@ -31,11 +36,10 @@ const QuestionItem = props => {
                 </span>
                 &nbsp;
                 <a href="/forum_in" className="h6 text-topics">
-                  10 Kids Unaware of Their Halloween Costume1
+                  { this.props.question.title }
                 </a>
                 <p className="text-secondary">
-                  It's one thing to subject yourself to a Halloween costume mishap
-                  because, hey, that's your prerogative.
+                  { this.props.question.desc }
                 </p>
                 <p className="text-secondary">
                   <span className="ft-th">
@@ -62,9 +66,6 @@ const QuestionItem = props => {
           </div>
           </div>
         </div>
-      );
-  });
-  return rows;  
+    )
+  }
 }
-
-export default QuestionItem;
