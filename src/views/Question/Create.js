@@ -3,9 +3,8 @@ import React, { Component } from "react";
 export default class Create extends Component {
   render() {
     const {title,desc,submit,handleTitleChange,handleDescChange} = this.props;
-
     return (
-        <div className="col-12 col-sm-12">
+        <div className="col-12 col-sm-12 p-0">
           <div className="box-shadow mb-4">
             <div className="col-12 bg-topics py-3">
               <span className="h6 text-topics">
@@ -18,7 +17,7 @@ export default class Create extends Component {
                 <dir className="col-10 col-sm-10 col-md-12 col-lg-10 mx-auto">
                   <form onSubmit={submit}>
                     <div className="form-group row">
-                      <label for="category" className="col-sm-3 col-form-label">
+                      <label htmlFor="category" className="col-sm-3 col-form-label">
                         Bo'lim:
                       </label>
                       <div className="col-sm-9">
@@ -26,7 +25,7 @@ export default class Create extends Component {
                           className="custom-select mb-2 mr-sm-2 mb-sm-0"
                           id="inlineFormCustomSelect"
                         >
-                          <option selected>Umumiy bo'lim</option>
+                          <option value="all">Umumiy bo'lim</option>
                           <option value="1">Jamiyat va inson</option>
                           <option value="2">Umumiy savol va javoblar</option>
                           <option value="3">Three</option>
