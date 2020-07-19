@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from "./views/include/Navbar";
-import QuestionList from './views/Question/QuestionList';
+import QuestionList from './containers/Questions';
 
 function App() {
   return (
