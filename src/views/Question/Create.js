@@ -17,22 +17,6 @@ export default class Create extends Component {
                 <dir className="col-10 col-sm-10 col-md-12 col-lg-10 mx-auto">
                   <form onSubmit={submit}>
                     <div className="form-group row">
-                      <label htmlFor="category" className="col-sm-3 col-form-label">
-                        Bo'lim:
-                      </label>
-                      <div className="col-sm-9">
-                        <select
-                          className="custom-select mb-2 mr-sm-2 mb-sm-0"
-                          id="inlineFormCustomSelect"
-                        >
-                          <option value="all">Umumiy bo'lim</option>
-                          <option value="1">Jamiyat va inson</option>
-                          <option value="2">Umumiy savol va javoblar</option>
-                          <option value="3">Three</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div className="form-group row">
                       <label
                         htmlFor="inputEmail3"
                         className="col-sm-3 col-form-label"
@@ -44,7 +28,6 @@ export default class Create extends Component {
                           type="input"
                           className="form-control"
                           id="inputEmail3"
-                          placeholder="mavzu"
                           value={title}
                           onChange={handleTitleChange}
                         />
@@ -64,22 +47,6 @@ export default class Create extends Component {
                           value={desc}
                           onChange={handleDescChange}
                         ></textarea>
-                      </div>
-                    </div>
-                    <div className="form-group row">
-                      <label
-                        htmlFor="inputEmail3"
-                        className="col-sm-3 col-form-label"
-                      >
-                        Teglar:
-                      </label>
-                      <div className="col-sm-9">
-                        <input
-                          type="email"
-                          className="form-control"
-                          id="inputEmail3"
-                          data-role="tagsinput"
-                        />
                       </div>
                     </div>
                     <div className="form-group row">

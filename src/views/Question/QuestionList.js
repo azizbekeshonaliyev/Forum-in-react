@@ -48,7 +48,6 @@ export default class QuestionList extends Component {
                     {this.state.questions.map(item => (
                         <QuestionItem key={item.id} question={item}></QuestionItem>
                     ))}
-
                     <Create 
                         submit={this.handleSubmit} 
                         handleTitleChange={this.handleTitleChange}
