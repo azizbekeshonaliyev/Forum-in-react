@@ -21,7 +21,7 @@ export default class Create extends Component {
                         htmlFor="inputEmail3"
                         className="col-sm-3 col-form-label"
                       >
-                        Savol mavzusi:
+                        Mavzu:
                       </label>
                       <div className="col-sm-9">
                         <input
