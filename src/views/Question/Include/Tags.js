@@ -14,6 +14,7 @@ export default class Tags extends Component {
             <span className="badge badge-secondary mb-2 ml-1">java</span>
             <span className="badge badge-secondary mb-2 ml-1">c++</span>
             <span className="badge badge-secondary mb-2 ml-1">vuejs</span>
+            <span className="badge badge-secondary mb-2 ml-1">reactjs</span>
           </h6>
         </div>
       </div>
