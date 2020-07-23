@@ -1,15 +1,24 @@
 import React from 'react';
-import Navbar from "./views/include/Navbar";
-import QuestionList from './containers/Questions';
+import { HashRouter, Route, Switch } from 'react-router-dom';
+
+const TheLayout = React.lazy(() => import('./containers/TheLayout'));
+
+const loading = (
+  <div className="pt-3 text-center">
+    <div className="sk-spinner sk-spinner-pulse"></div>
+  </div>
+)
+
 
 function App() {
   return (
-    <div>
-      <Navbar></Navbar>
-        <div className="container mb-5">
-            <QuestionList></QuestionList>
-        </div>
-      </div>
+    <HashRouter>
+      <React.Suspense fallback={loading}>
+        <Switch>
+          <Route path="/" name="Home" render={props => <TheLayout {...props}/>} />
+        </Switch>
+      </React.Suspense>
+    </HashRouter>
   );
 }
 
