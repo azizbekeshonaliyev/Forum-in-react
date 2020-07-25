@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
-import QuestionList from '../views/Question/QuestionList'
+import Questions from '../views/Question/Questions'
 import { addQuestion } from "../actions/questions";
-import { getList } from "./../selectors/Questions";
+import { getList } from "../selectors/Questions";
 
 const mapStateToProps = (state) => {
     return {
@@ -18,4 +18,4 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(QuestionList)
+)(Questions)

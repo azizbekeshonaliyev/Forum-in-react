@@ -1,12 +1,10 @@
 
-import React, { Component } from 'react'
+import React from 'react'
+import { Link, useRouteMatch } from "react-router-dom";
 
-export default class QuestionItem extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
+const QuestionItem = (props) => {
+    let { url } = useRouteMatch();
+    // console.log(this.props);
     return (
       <div className="box-shadow mb-4">
           <div className="col-12 bg-white py-4 topics">
@@ -35,11 +33,11 @@ export default class QuestionItem extends Component {
                   <span className="fa fa-check-square"></span>
                 </span>
                 &nbsp;
-                <a href="/forum_in" className="h6 text-topics">
-                  { this.props.question.title }
-                </a>
+                <Link to={`${url}/${props.question.id}`} className="h6 text-topics">
+                  { props.question.title }
+                </Link>
                 <p className="text-secondary">
-                  { this.props.question.desc }
+                  { props.question.desc }
                 </p>
                 <p className="text-secondary">
                   <span className="ft-th">
@@ -67,5 +65,6 @@ export default class QuestionItem extends Component {
           </div>
         </div>
     )
-  }
 }
+
+export default QuestionItem;
