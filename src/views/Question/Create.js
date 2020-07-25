@@ -1,8 +1,12 @@
-import React, { Component } from "react";
+import React, {useEffect, Component } from "react";
 
-export default class Create extends Component {
-  render() {
-    const {title,desc,submit,handleTitleChange,handleDescChange} = this.props;
+ const Create = (props) => {
+
+  useEffect(() => {
+  },[props.title]);
+
+  const {title,desc,submit,handleTitleChange,handleDescChange} = props;
+
     return (
         <div className="col-12 col-sm-12 p-0">
           <div className="box-shadow mb-4">
@@ -66,5 +70,6 @@ export default class Create extends Component {
           </div>
         </div>
     );
-  }
 }
+
+export default Create;

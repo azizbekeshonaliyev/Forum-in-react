@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Questions = React.lazy(() => import('./containers/Questions'));
+const QuestionMain = React.lazy(() => import('./views/Question/QuestionMain'));
 
 const routes = [
   { path: '/', exact: true, name: 'Home' },
-  { path: '/questions', name: 'Questions', component: Questions },
+  { path: '/questions', name: 'Questions', component: QuestionMain },
 
 ];
 
