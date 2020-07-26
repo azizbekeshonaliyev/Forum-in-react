@@ -14,7 +14,7 @@ const QuestionItem = (props) => {
                   <img
                     className="rounded-circle img-fluid"
                     alt="Jamshid"
-                    src={"img/avatar/nH0ACPHVUQJXR.jpg"}
+                    src={"/img/avatar/nH0ACPHVUQJXR.jpg"}
                   />
                 </div>
                 <p>
@@ -36,8 +36,7 @@ const QuestionItem = (props) => {
                 <Link to={`${url}/${props.question.id}`} className="h6 text-topics">
                   { props.question.title }
                 </Link>
-                <p className="text-secondary">
-                  { props.question.desc }
+                <p className="text-secondary" dangerouslySetInnerHTML={{__html: props.question.desc}}>
                 </p>
                 <p className="text-secondary">
                   <span className="ft-th">

@@ -7,5 +7,5 @@ module.exports = {
     alias: {
       '@': '/src/'
     }
-  },
+  }
 }
