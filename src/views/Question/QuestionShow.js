@@ -1,19 +1,30 @@
 
-import React, { Component } from 'react'
+import React from 'react'
+import CreateQuestionButton from './../Buttons/CreateQuestionButton';
 
-const QuestionShow = () => {
-    return (
+const QuestionShow = (props) => {
+  
+  const { params } = props.match;
+
+  if (params.questionId != null) {
+    console.log(params);
+    const question  = props.question(params.questionId);
+    if (question != null) {
+      return (
         <div className="box-shadow mb-4">
-        <div className="col-12 bg-topics py-3">
-          <span className="h6 text-topics">Savol: 10 Kids Unaware of Their Halloween Costume</span>
-          <span className="badge badge-secondary px-1 py-1 float-right">Ko'rilgan: 86</span>
-          <span className="badge badge-secondary mr-2 px-1 py-1 float-right">Javoblar: 12</span>         
-        </div>
+          <div className="row my-1">
+              <div className="col-8">
+                  <h4>{question.title}</h4>
+              </div>
+              <div className="col-4 text-right">
+                  <CreateQuestionButton></CreateQuestionButton>
+              </div>
+          </div>
         <div className="col-12 bg-white py-4 topics">
           <div className="row">
             <div className="col-2 no-guttesr text-center">
               <div className="col-9 mx-auto mb-2 px-0 px-sm-0 px-md-0 px-lg-0 px-xl-3">
-                <img className="rounded-circle img-fluid" src={"img/avatar/nH0ACPHVUQJXR.jpg"}/>
+                <img className="rounded-circle img-fluid" src={"/img/avatar/nH0ACPHVUQJXR.jpg"}/>
               </div>
               <p>
                 <a href="#">Jamshid</a>
@@ -54,25 +65,7 @@ const QuestionShow = () => {
                   Teglar: <a href="#"><span className="badge badge-secondary">sug'urta</span></a> <a href="#"><span className="badge badge-secondary">omonat</span></a>
                 </span>
               </p>
-              <span className="text-topics">
-                <p>
-                  Hi there!
-                </p>
-                <p>
-                  I just want to welcome you to the new One Click - Premium Vanilla Forum.<br/>
-                  This was made to be very fast and easy for you to start giving support.
-                </p>
-                <p>
-                  With just one click you get all the installation complete after 2 minutes.
-                </p>
-                <p>
-                  You got a built in Style Editor that you can use to easily customize your forum.
-                  So, I really hope you like this.
-                </p>
-                <p>
-                Cheers
-                </p>
-              </span>
+              <span className="text-topics"  dangerouslySetInnerHTML={{__html: question.desc}}></span>
             </div>
           </div>
         </div>
@@ -83,7 +76,7 @@ const QuestionShow = () => {
           <div className="row">
             <div className="col-2 no-guttesr text-center">
               <div className="col-9 mx-auto mb-2 px-0 px-sm-0 px-md-0 px-lg-0 px-xl-3">
-                <img className="rounded-circle img-fluid"  src={"img/avatar/nH0ACPHVUQJXR.jpg"}/>
+                <img className="rounded-circle img-fluid"  src={"/img/avatar/nH0ACPHVUQJXR.jpg"}/>
               </div>
               <p>
                 <small className="text-topics">
@@ -136,7 +129,7 @@ const QuestionShow = () => {
           <div className="row">
             <div className="col-2 no-guttesr text-center">
               <div className="col-9 mx-auto mb-2 px-0 px-sm-0 px-md-0 px-lg-0 px-xl-3">
-                <img className="rounded-circle img-fluid"  src={"img/avatar/nH0ACPHVUQJXR.jpg"}/>
+                <img className="rounded-circle img-fluid"  src={"/img/avatar/nH0ACPHVUQJXR.jpg"}/>
               </div>
               <p>
                 <small className="text-topics">
@@ -190,7 +183,7 @@ const QuestionShow = () => {
           <div className="row">
             <div className="col-2 no-guttesr text-center">
               <div className="col-9 mx-auto mb-2 px-0 px-sm-0 px-md-0 px-lg-0 px-xl-3">
-                <img className="rounded-circle img-fluid"  src={"img/avatar/nYAYDDFF66I1J.jpg"}/>
+                <img className="rounded-circle img-fluid"  src={"/img/avatar/nYAYDDFF66I1J.jpg"}/>
               </div>
               <p>
                 <small className="text-topics">
@@ -247,7 +240,7 @@ const QuestionShow = () => {
           <div className="row">
             <div className="col-2 no-guttesr text-center">
               <div className="col-9 mx-auto mb-2 px-0 px-sm-0 px-md-0 px-lg-0 px-xl-3">
-                <img className="rounded-circle img-fluid" src={"img/avatar/nH0ACPHVUQJXR.jpg"}/>
+                <img className="rounded-circle img-fluid" src={"/img/avatar/nH0ACPHVUQJXR.jpg"}/>
               </div>
               <p>
                 <small className="text-topics">
@@ -268,7 +261,13 @@ const QuestionShow = () => {
           </div>
         </div>
       </div>
-    )
+      )
+    }    
+  }
+
+  return (
+    <h4>Question not found!</h4>
+  )
 }
 
 export default QuestionShow;

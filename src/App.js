@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch, BrowserRouter } from 'react-router-dom';
 
 const TheLayout = React.lazy(() => import('./containers/TheLayout'));
 
@@ -14,7 +14,7 @@ const loading = (
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <React.Suspense fallback={loading}>
         <Switch>
           <Route exact path="/register" name="Register Page" render={props => <Register {...props}/>} />
@@ -22,7 +22,7 @@ function App() {
           <Route path="/" name="Home" render={props => <TheLayout {...props}/>} />
         </Switch>
       </React.Suspense>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
