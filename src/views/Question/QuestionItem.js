@@ -45,9 +45,6 @@ const QuestionItem = (props) => {
                     &nbsp;|&nbsp;
                     <span className="fa fa-clock-o"></span>&nbsp;Qo'shilgan:
                     2017-09-07 10:05 &nbsp;|&nbsp;
-                    <span className="fa fa-bars"></span>&nbsp;Bo'lim:{" "}
-                    <a href="#">Laravel</a>
-                  </span>
                 </p>
               </div>
               <div className="col-2">
