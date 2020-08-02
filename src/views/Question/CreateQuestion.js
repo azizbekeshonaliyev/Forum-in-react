@@ -10,6 +10,7 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
       { label: "Lravel", value: "laravel" },
       { label: "Vuejs", value: "vuejs" },
       { label: "Reactjs", value: "react"},
+      { label: "Django", value: "django"},
       { label: "Python", value: "python" }
     ];
 
